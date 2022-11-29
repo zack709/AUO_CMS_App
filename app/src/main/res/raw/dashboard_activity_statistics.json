@@ -1,0 +1,10 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "OK.",
+    "payload": {
+        "statisticsType": "Player",
+        "activeCount": 16,
+        "inactiveCount": 3
+    }
+}

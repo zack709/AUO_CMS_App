@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.shelf.ShelfManager">
+
+    <TextView
+        android:id="@+id/fragment_shelf_manager_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="@string/fragment_shelf_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment_shelf_manager_shelf_list_header"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_shelf_manager_shelf_list_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@color/AUOPrimary"
+        app:layout_constraintTop_toBottomOf="@id/fragment_shelf_manager_title"
+        app:layout_constraintBottom_toTopOf="@id/fragment_shelf_manager_shelf_list"
+        >
+
+        <TextView
+            android:id="@+id/fragment_shelf_manager_shelf_list_header_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/fragment_shelf_header_name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/fragment_shelf_manager_shelf_list_header_divider1"
+            />
+
+        <View
+            android:id="@+id/fragment_shelf_manager_shelf_list_header_divider1"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toRightOf="@id/fragment_shelf_manager_shelf_list_header_name"
+            app:layout_constraintRight_toLeftOf="@id/fragment_shelf_manager_shelf_list_header_rows"
+            />
+
+        <TextView
+            android:id="@+id/fragment_shelf_manager_shelf_list_header_rows"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/fragment_shelf_header_rows"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/fragment_shelf_manager_shelf_list_header_divider1"
+            app:layout_constraintRight_toLeftOf="@id/fragment_shelf_manager_shelf_list_header_divider2"
+            />
+
+        <View
+            android:id="@+id/fragment_shelf_manager_shelf_list_header_divider2"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="5dp"
+            android:background="#FFFFFF"
+            app:layout_constraintLeft_toRightOf="@id/fragment_shelf_manager_shelf_list_header_rows"
+            app:layout_constraintRight_toLeftOf="@id/fragment_shelf_manager_shelf_list_header_columns"
+            />
+
+        <TextView
+            android:id="@+id/fragment_shelf_manager_shelf_list_header_columns"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/fragment_shelf_header_columns"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/fragment_shelf_manager_shelf_list_header_divider2"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_shelf_manager_shelf_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginBottom="5dp"
+        android:paddingHorizontal="2dp"
+        app:divider="@drawable/item_divider"
+        app:item_layout="@layout/item_shelf_manager"
+        app:layout_constraintTop_toBottomOf="@id/fragment_shelf_manager_shelf_list_header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

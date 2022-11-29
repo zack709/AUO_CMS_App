@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <Scheduler Version="1.0" SupportedResolution="1920x1080" IsFR="N" Type="Normal" ScheduleID="1">
+   <ScheduleInfos>
+     <ScheduleInfo Id="Normal1" InterCut="0" Priority="100" RepeatedCount="-1" BackgroundAudio="none" Volume="100" RRule="FREQ=DAILY;COUNT=33" DTStart="20220929T000000" DTEnd="20221031T235959" Duration="PT23H59M59S" Name="New event">
+       <Content SceneID="1133088568312350077" Name="預設版型1-(1)" Duration="60" TempDuration="60" />
+       <Content SceneID="1133088568314044369" Name="預設版型1-(1)-(1)" Duration="60" TempDuration="60" />
+     </ScheduleInfo>
+   </ScheduleInfos>
+   <Groups>
+     <Group Id="Normal1" InterCut="0" Priority="100" PlayTime="0 0 0 29 9 * 22 D" EndTime="59 59 23 31 10 * 22 D" RepeatedCount="-1" BackgroundAudio="none" Volume="100" Name="New event">
+       <Content SceneID="1133088568312350077" Name="預設版型1-(1)" Duration="60" TempDuration="60" />
+       <Content SceneID="1133088568314044369" Name="預設版型1-(1)-(1)" Duration="60" TempDuration="60" />
+     </Group>
+   </Groups>
+   <Scenes>
+     <Scene Id="1133088568312350077" Name="預設版型1-(1)" TemplateID="109" Version="1.0" Author="admin" SupportedResolution="1920x1080" Template="true" Duration="60" TempDuration="60" EnterEffect="None" EnterEffectDuration="0" DelayDurationToExit="0" Background="#FFFFFFFF">
+       <Region Name="MixMedia" Id="10133088568321328796" IsEditable="true" X="0" Y="0" Z="1" Width="1154" Height="1080" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="11133088568321509848" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="1" Background="#00FFFFFF" Width="1154" Height="1080" Duration="36">
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_1154_1080" RepeatedCount="-1" StartTime="0" Duration="30" Name="1133088559631742622_1154_1080.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+           <Video Id="1133088559024977899" Pkey="1133088559024977899" RepeatedCount="-1" StartTime="30" Duration="6" Name="07d36f0b1b7c403986af7f1c8434204c.mp4" Source="small" Volume="100" />
+         </Media>
+       </Region>
+       <Region Name="MixMedia" Id="14133088568327052222" IsEditable="true" X="1154" Y="0" Z="2" Width="766" Height="720" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="15133088568327122282" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="2" Background="#00FFFFFF" Width="766" Height="720" Duration="36">
+           <Video Id="1133088559024977899" Pkey="1133088559024977899" RepeatedCount="-1" StartTime="0" Duration="6" Name="07d36f0b1b7c403986af7f1c8434204c.mp4" Source="small" Volume="100" />
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_720" RepeatedCount="-1" StartTime="6" Duration="30" Name="1133088559631742622_766_720.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+         </Media>
+       </Region>
+       <Region Name="MixMedia" Id="18133088568330252272" IsEditable="true" X="1154" Y="720" Z="3" Width="766" Height="360" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="19133088568330311292" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="3" Background="#00FFFFFF" Width="766" Height="360" Duration="60">
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_360" RepeatedCount="-1" StartTime="0" Duration="30" Name="1133088559631742622_766_360.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_360" RepeatedCount="-1" StartTime="30" Duration="30" Name="1133088559631742622_766_360.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+         </Media>
+       </Region>
+       <Region Name="Text" Id="112133088568332212589" IsEditable="true" X="50" Y="50" Z="1000" Width="473" Height="383" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="1" Id="113133088568332272364" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="1000" Background="#00000000" Width="473" Height="383" Duration="10">
+           <Text Id="114133088568332942534" RepeatedCount="-1" StartTime="0" Duration="10" Background="#00FFFFFF" FontFamily="Arial" FontSize="15" FontColor="#FF999999" Bold="False" Italic="False" Underline="false" Alignment="Left|Top" CharacterSpace="TBD" LineSpace="TBD" TextLineEffect="None" TextLineEffectDuration="10000" TextLineWidth="473" TextLineHeight="383" TextImageWidth="981" TextImageHeight="71" ForceBreak="false" Type="xml"><![CDATA[<Block>
+   <TextBlock FontFamily="Times New Roman" FontColor="#FFFF0000" FontSize="150" Bold="false" Italic="false" Strike="false">A</TextBlock>
+ </Block>]]></Text>
+         </Media>
+       </Region>
+     </Scene>
+     <Scene Id="1133088568314044369" Name="預設版型1-(1)-(1)" TemplateID="110" Version="1.0" Author="admin" SupportedResolution="1920x1080" Template="true" Duration="60" TempDuration="60" EnterEffect="None" EnterEffectDuration="0" DelayDurationToExit="0" Background="#FFFFFFFF">
+       <Region Name="MixMedia" Id="10133088568334965756" IsEditable="true" X="0" Y="0" Z="1" Width="1154" Height="1080" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="11133088568335045545" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="1" Background="#00FFFFFF" Width="1154" Height="1080" Duration="36">
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_1154_1080" RepeatedCount="-1" StartTime="0" Duration="30" Name="1133088559631742622_1154_1080.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+           <Video Id="1133088559024977899" Pkey="1133088559024977899" RepeatedCount="-1" StartTime="30" Duration="6" Name="07d36f0b1b7c403986af7f1c8434204c.mp4" Source="small" Volume="100" />
+         </Media>
+       </Region>
+       <Region Name="MixMedia" Id="14133088568336660084" IsEditable="true" X="1154" Y="0" Z="2" Width="766" Height="720" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="15133088568336709925" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="2" Background="#00FFFFFF" Width="766" Height="720" Duration="36">
+           <Video Id="1133088559024977899" Pkey="1133088559024977899" RepeatedCount="-1" StartTime="0" Duration="6" Name="07d36f0b1b7c403986af7f1c8434204c.mp4" Source="small" Volume="100" />
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_720" RepeatedCount="-1" StartTime="6" Duration="30" Name="1133088559631742622_766_720.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+         </Media>
+       </Region>
+       <Region Name="MixMedia" Id="18133088568338225587" IsEditable="true" X="1154" Y="720" Z="3" Width="766" Height="360" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="0" Id="19133088568338284718" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="3" Background="#00FFFFFF" Width="766" Height="360" Duration="60">
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_360" RepeatedCount="-1" StartTime="0" Duration="30" Name="1133088559631742622_766_360.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+           <Image Id="1133088559631742622" Pkey="1133088559631742622_766_360" RepeatedCount="-1" StartTime="30" Duration="30" Name="1133088559631742622_766_360.png" Source="110085699" EnterEffect="None" EnterEffectDuration="0" ExitEffect="None" ExitEffectDuration="0" ScaleType="None" />
+         </Media>
+       </Region>
+       <Region Name="Text" Id="112133088568339720274" IsEditable="true" X="50" Y="50" Z="1000" Width="473" Height="383" Background="#00FFFFFF" RepeatedCount="-1">
+         <Media Name="defaultMediaName" MediaType="1" Id="113133088568339799641" RepeatedCount="-1" IsEditable="true" X="0" Y="0" Z="1000" Background="#00000000" Width="473" Height="383" Duration="10">
+           <Text Id="114133088568340099148" RepeatedCount="-1" StartTime="0" Duration="10" Background="#00FFFFFF" FontFamily="Arial" FontSize="15" FontColor="#FF999999" Bold="False" Italic="False" Underline="false" Alignment="Left|Top" CharacterSpace="TBD" LineSpace="TBD" TextLineEffect="None" TextLineEffectDuration="" TextLineWidth="473" TextLineHeight="383" TextImageWidth="981" TextImageHeight="71" ForceBreak="false" Type="xml"><![CDATA[<Block>
+   <TextBlock FontFamily="Times New Roman" FontColor="#FFFF0000" FontSize="150" Bold="false" Italic="false" Strike="false">B</TextBlock>
+ </Block>]]></Text>
+         </Media>
+       </Region>
+     </Scene>
+   </Scenes>
+   <MediaFiles SourceType="general">
+     <File Pkey="1133088559631742622_1154_1080" Length="1005646" FileName="1133088559631742622_1154_1080.png" FileUriMethod="get" FileUri="Http://localhost/CMSModel/api/ScheduleMedia/File?File=thumbnail/Normal/1133088559631742622_1154_1080.png" FileUriParam="File=thumbnail/Normal/1133088559631742622_1154_1080.png" />
+     <File Pkey="1133088559024977899" Length="383631" FileName="07d36f0b1b7c403986af7f1c8434204c.mp4" FileUriMethod="get" FileUri="Http://localhost/CMSModel/api/ScheduleMedia/File?File=upload/Default Company/test_image_category/07d36f0b1b7c403986af7f1c8434204c.mp4" FileUriParam="File=upload/Default Company/test_image_category/07d36f0b1b7c403986af7f1c8434204c.mp4" />
+     <File Pkey="1133088559631742622_766_720" Length="474814" FileName="1133088559631742622_766_720.png" FileUriMethod="get" FileUri="Http://localhost/CMSModel/api/ScheduleMedia/File?File=thumbnail/Normal/1133088559631742622_766_720.png" FileUriParam="File=thumbnail/Normal/1133088559631742622_766_720.png" />
+     <File Pkey="1133088559631742622_766_360" Length="244598" FileName="1133088559631742622_766_360.png" FileUriMethod="get" FileUri="Http://localhost/CMSModel/api/ScheduleMedia/File?File=thumbnail/Normal/1133088559631742622_766_360.png" FileUriParam="File=thumbnail/Normal/1133088559631742622_766_360.png" />
+   </MediaFiles>
+ </Scheduler>

@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "OK.",
+    "payload": {
+        "imageCount": 87,
+        "videoCount": 33
+    }
+}

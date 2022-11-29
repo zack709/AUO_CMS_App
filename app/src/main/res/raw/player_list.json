@@ -1,0 +1,82 @@
+{
+    "success": true,
+    "statusCode": 0,
+    "message": "",
+    "payload": {
+        "groups": [
+            {
+                "id": 1,
+                "name": "Group PG01",
+                "players": [
+                    {
+                        "id": 1,
+                        "name": "PublicDisplay PD01"
+                    },
+                    {
+                        "id": 2,
+                        "name": "PublicDisplay PD02"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Group PG02",
+                "players": [
+                    {
+                        "id": 3,
+                        "name": "PublicDisplay PD03"
+                    },
+                    {
+                        "id": 4,
+                        "name": "PublicDisplay PD04"
+                    },
+                    {
+                        "id": 5,
+                        "name": "PublicDisplay PD05"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Group PG03",
+                "players": []
+            },
+            {
+                "id": 4,
+                "name": "Group PG04",
+                "players": [
+                    {
+                        "id": 2,
+                        "name": "PublicDisplay PD02"
+                    },
+                    {
+                        "id": 3,
+                        "name": "PublicDisplay PD03"
+                    },
+                    {
+                        "id": 5,
+                        "name": "PublicDisplay PD05"
+                    }
+                ]
+            }
+        ],
+        "individuals": [
+            {
+                "id": 6,
+                "name": "PublicDisplay PD06"
+            },
+            {
+                "id": 7,
+                "name": "PublicDisplay PD07"
+            },
+            {
+                "id": 8,
+                "name": "PublicDisplay PD08"
+            },
+            {
+                "id": 9,
+                "name": "PublicDisplay PD09"
+            }
+        ]
+    }
+}

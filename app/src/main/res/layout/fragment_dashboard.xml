@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="">
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="431dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fragment_dashboard_card_delivered"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.33"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_title_delivered"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fragment_dashboard_text_delivered"
+                            />
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_info_delivered"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textSize="36sp"
+                            android:textColor="@color/AUOPrimary"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_waiting_delivery"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.33"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_title_waiting_delivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fragment_dashboard_text_waiting_delivery"
+                            />
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_info_waiting_delivery"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textSize="36sp"
+                            android:textColor="@color/AUOPrimary"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_current_playing"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.34"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_title_current_playing"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fragment_dashboard_text_current_playing" />
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_info_current_playing"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textSize="36sp"
+                            android:textColor="@color/AUOPrimary"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="110dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_played_seconds"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_title_played_seconds"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fragment_dashboard_text_played_seconds" />
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_info_played_seconds"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textSize="36sp"
+                            android:textColor="@color/AUOPrimary"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_media_storage"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_title_media_storage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/fragment_dashboard_text_media_storage" />
+
+                        <TextView
+                            android:id="@+id/fragment_dashboard_info_media_storage"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:textSize="36sp"
+                            android:textColor="@color/AUOPrimary"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/chart_card1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="10dp">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/fragment_dashboard_player_activity_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/chart_card2"
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:layout_weight="0.5"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="10dp">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/fragment_dashboard_media_statistics"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </TableRow>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/action_settings">
+
+                <ir.androidexception.datatable.DataTable
+                    android:id="@+id/data_table"
+                    android:layout_width="2000px"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/AUOSecondary"
+                    app:corner_radius="8dp"
+                    app:direction="ltr"
+                    app:divider_color="@color/black"
+                    app:header_background_color="#fff"
+                    app:header_gravity="center"
+                    app:header_horizontal_padding="0dp"
+                    app:header_text_color="#000"
+                    app:header_text_size="8sp"
+                    app:header_vertical_padding="16dp"
+                    app:persian_number="false"
+                    app:row_background_color="#fff"
+                    app:row_gravity="center"
+                    app:row_text_color="#000"
+                    app:row_text_size="8sp"
+                    app:row_vertical_padding="16dp" />
+            </HorizontalScrollView>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

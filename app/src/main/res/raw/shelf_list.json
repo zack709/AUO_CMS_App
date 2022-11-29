@@ -1,0 +1,30 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "",
+    "payload": [
+        {
+            "players": [
+                {
+                    "pkey": 1,
+                    "shelf_pkey": 1,
+                    "device_pkey": 1,
+                    "column": 1,
+                    "row": 0
+                },
+                {
+                    "pkey": 2,
+                    "shelf_pkey": 1,
+                    "device_pkey": 2,
+                    "column": 1,
+                    "row": 1
+                }
+            ],
+            "pkey": 1,
+            "columns": 1,
+            "rows": 3,
+            "name": "Test",
+            "description": "Description"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">AUO CMS</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_settings">設定</string>
+    <string name="action_logout">登出</string>
+
+    <!-- Menu -->
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_shelf">貨架管理</string>
+    <string name="menu_quick">快速發佈</string>
+
+    <!-- Common -->
+    <string name="text_previous">前一步</string>
+    <string name="text_next">下一步</string>
+    <string name="text_edit">編輯</string>
+    <string name="text_ok">OK</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_finish">完成</string>
+
+    <!-- Login -->
+    <string name="fragment_login_label_username">Username</string>
+    <string name="fragment_login_label_password">Password</string>
+    <string name="fragment_login_text_title">Welcome to AUO CMS.</string>
+    <string name="fragment_login_text_remember">記住帳密</string>
+    <string name="fragment_login_text_forgot_password">Forgot password?</string>
+    <string name="fragment_login_text_login">登入</string>
+    <string name="fragment_login_error_empty_account">請輸入帳號</string>
+    <string name="fragment_login_error_empty_password">請輸入密碼</string>
+
+    <!-- Dashboard -->
+    <string name="fragment_dashboard_title">Dashboard</string>
+    <string name="fragment_dashboard_text_delivered">已派送數量</string>
+    <string name="fragment_dashboard_text_waiting_delivery">等待派送數</string>
+    <string name="fragment_dashboard_text_current_playing">目前撥放數</string>
+    <string name="fragment_dashboard_text_played_seconds">播放秒數</string>
+    <string name="fragment_dashboard_text_media_storage">多媒體空間</string>
+
+    <!-- Shelf -->
+    <string name="fragment_shelf_title">貨架管理</string>
+    <string name="fragment_shelf_header_name">貨架名稱</string>
+    <string name="fragment_shelf_header_rows">列</string>
+    <string name="fragment_shelf_header_columns">欄</string>
+    <string name="fragment_shelf_player_manager_title">貨架: %1$s</string>
+    <string name="fragment_shelf_player_header_name">名稱</string>
+    <string name="fragment_shelf_player_row_text">第%1$d列</string>
+    <string name="fragment_shelf_player_column_text">第%1$d欄</string>
+
+
+    <!-- Quick -->
+    <string name="fragment_quick_publish_title">快速發佈</string>
+    <string name="fragment_quick_player_select_title">選擇播放器</string>
+    <string name="fragment_quick_datetime_title">播放時間</string>
+    <string name="fragment_quick_datetime_start_time">開始時間:</string>
+    <string name="fragment_quick_datetime_end_time">結束時間:</string>
+    <string name="title_activity_test">test</string>
+
+</resources>

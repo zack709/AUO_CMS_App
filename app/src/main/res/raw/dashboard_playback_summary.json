@@ -1,0 +1,12 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "OK.",
+    "payload": {
+        "delivered": 33,
+        "waitingDelivery": 1,
+        "currentPlaying": 20,
+        "playedSeconds": 313200,
+        "mediaStorage": 219
+    }
+}
