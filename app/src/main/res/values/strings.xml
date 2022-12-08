@@ -26,11 +26,19 @@
     <string name="fragment_login_label_username">Username</string>
     <string name="fragment_login_label_password">Password</string>
     <string name="fragment_login_text_title">Welcome to AUO CMS.</string>
-    <string name="fragment_login_text_remember">記住帳密</string>
+    <string name="fragment_login_text_remember">Remember this device</string>
     <string name="fragment_login_text_forgot_password">Forgot password?</string>
-    <string name="fragment_login_text_login">登入</string>
-    <string name="fragment_login_error_empty_account">請輸入帳號</string>
-    <string name="fragment_login_error_empty_password">請輸入密碼</string>
+    <string name="fragment_login_text_login">Login</string>
+    <string name="fragment_login_error_empty_username">Empty username</string>
+    <string name="fragment_login_error_empty_password">Empty password</string>
+
+    <!-- Forgot Password -->
+    <string name="fragment_forgot_password_title">Forgot your password?</string>
+    <string name="fragment_forgot_password_text">Please enter the email address associated with your account and We will email you a link to reset your password.</string>
+    <string name="fragment_forgot_password_label_email">Email Address</string>
+    <string name="fragment_forgot_password_hint_email">Email address</string>
+    <string name="fragment_forgot_password_button_send_link">Send Link</string>
+    <string name="fragment_forgot_password_back_to_login">Back to Login</string>
 
     <!-- Dashboard -->
     <string name="fragment_dashboard_title">Dashboard</string>

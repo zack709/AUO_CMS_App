@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         loginAccountView = headerView.findViewById(R.id.nav_login_account);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_dashboard, R.id.nav_shelf_manager, R.id.nav_quick_layout_select)
+                R.id.nav_dashboard, R.id.nav_shelf_manager, R.id.nav_quick_layout_select, R.id.nav_login)
                 .setOpenableLayout(drawer)
                 .build();
 

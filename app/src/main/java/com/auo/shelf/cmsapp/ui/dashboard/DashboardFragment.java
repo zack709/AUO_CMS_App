@@ -67,7 +67,7 @@ public class DashboardFragment extends Fragment {
         super.onResume();
         ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.fragment_dashboard_title);
         if (MainActivity.accountBean.token == null) {
-            NavHostFragment.findNavController(DashboardFragment.this).navigate(R.id.action_No_Login);
+            NavHostFragment.findNavController(DashboardFragment.this).navigate(R.id.action_dashboard_to_login);
         }else{
             // 上方五格
             Dashboard dashboard = new Dashboard();
