@@ -3,6 +3,7 @@ package com.auo.shelf.cmsapp;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.Menu;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import com.auo.shelf.cmsapp.ui.quick.QuickPublishSetting;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -39,23 +41,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(false);
+        actionBar.setHomeButtonEnabled(false);
 
+        binding.appBarMain.actionBarMenu.setOnClickListener(menuClick);
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         View headerView = navigationView.getHeaderView(0);
-        loginAccountView = headerView.findViewById(R.id.nav_login_account);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_dashboard, R.id.nav_shelf_manager, R.id.nav_quick_layout_select, R.id.nav_login)
-                .setOpenableLayout(drawer)
                 .build();
 
-        mAppBarConfiguration = new AppBarConfiguration.Builder(R.id.nav_login).build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
 
         // Request camera permissions
         if (!allPermissionsGranted()) {
@@ -70,8 +73,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+//        getMenuInflater().inflate(R.menu.main, menu);
+        return false;
     }
 
     @Override
@@ -86,4 +89,9 @@ public class MainActivity extends AppCompatActivity {
             loginAccountView.setText(MainActivity.accountBean.account);
         }
     }
+
+    private View.OnClickListener menuClick = view -> {
+        binding.drawerLayout.openDrawer(Gravity.LEFT);
+    };
+
 }

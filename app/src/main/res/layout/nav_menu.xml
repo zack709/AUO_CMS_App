@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/flexy_grey_700">
+
+
+    <LinearLayout
+        android:id="@+id/nav_menu_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/border_nav_menu"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_dashboard"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_dashboard"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/menu_label_scheduling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/menu_label_scheduling"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/nav_menu_dashboard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/nav_menu_air_program"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/menu_label_scheduling"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_air_program"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_air_program"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_menu_program_management"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/nav_menu_air_program"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_program_management"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_program_management"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/menu_label_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/menu_label_content"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/nav_menu_program_management"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/nav_menu_create_content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/menu_label_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_create_content"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_create_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_menu_content_management"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/nav_menu_create_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_content_management"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_content_management"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/menu_label_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/menu_label_device"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/nav_menu_content_management"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/nav_menu_device_management"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginVertical="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/menu_label_device"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/icon_device"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="@string/menu_device_management"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

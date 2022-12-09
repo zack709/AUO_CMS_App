@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
@@ -54,6 +55,9 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        ActionBar actionBar = ((MainActivity) getActivity()).getSupportActionBar();
+        actionBar.show();
     }
 
     @Override
@@ -65,10 +69,12 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.fragment_dashboard_title);
-        if (MainActivity.accountBean.token == null) {
-            NavHostFragment.findNavController(DashboardFragment.this).navigate(R.id.action_dashboard_to_login);
-        }else{
+//        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.fragment_dashboard_title);
+
+
+//        if (MainActivity.accountBean.token == null) {
+//            NavHostFragment.findNavController(DashboardFragment.this).navigate(R.id.action_dashboard_to_login);
+//        }else{
             // 上方五格
             Dashboard dashboard = new Dashboard();
             ApiResponse respPlaybackSummary = Utility.loadJson(getContext(), R.raw.dashboard_playback_summary);
@@ -93,7 +99,7 @@ public class DashboardFragment extends Fragment {
                     initMediaPieChart();
                 }
             }
-        }
+//        }
     }
 
     private void initPlaybackSummary(){

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +17,90 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.CMSApp.PopupOverlay" />
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:popupTheme="@style/Theme.CMSApp.PopupOverlay">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <ImageView
+                    android:id="@+id/action_bar_menu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginLeft="12dp"
+                    android:src="@mipmap/icon_menu"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    />
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@mipmap/icon_search"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/action_bar_menu"
+                    />
+
+                <ImageView
+                    android:id="@+id/action_bar_notification"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@mipmap/icon_notifications"
+                    android:elevation="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/action_bar_vertical_line"
+                    />
+
+                <View
+                    android:id="@+id/action_bar_vertical_line"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/flexy_grey_200"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/action_bar_avartar"
+                    />
+
+                <ImageView
+                    android:id="@+id/action_bar_avartar"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="4dp"
+                    android:layout_marginRight="44dp"
+                    android:src="@mipmap/icon_avatar"
+                    android:elevation="5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+
+                <ImageView
+                    android:id="@+id/action_bar_arrow_down"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@mipmap/icon_arrow_down"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 

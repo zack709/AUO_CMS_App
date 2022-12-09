@@ -11,6 +11,14 @@
 
     <!-- Menu -->
     <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_label_scheduling">SCHEDULING</string>
+    <string name="menu_air_program">Air Program Now</string>
+    <string name="menu_program_management">Program Management</string>
+    <string name="menu_label_content">CONTENT</string>
+    <string name="menu_create_content">Create Content</string>
+    <string name="menu_content_management">Content Management</string>
+    <string name="menu_label_device">DEVICE</string>
+    <string name="menu_device_management">Device Management</string>
     <string name="menu_shelf">貨架管理</string>
     <string name="menu_quick">快速發佈</string>
 

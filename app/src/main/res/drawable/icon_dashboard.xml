@@ -1,0 +1,69 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:width="24dp"
+    android:height="24dp">
+    <group
+        android:translateX="-0.375"
+        android:translateY="-0.375">
+        <path
+            android:pathData="M6 8.25H3.75A2.253 2.253 0 0 1 1.5 6V3.75A2.253 2.253 0 0 1 3.75 1.5H6A2.253 2.253 0 0 1 8.25 3.75V6A2.253 2.253 0 0 1 6 8.25M3.75 3A0.751 0.751 0 0 0 3 3.75V6a0.751 0.751 0 0 0 0.75 0.75H6A0.751 0.751 0 0 0 6.75 6V3.75A0.751 0.751 0 0 0 6 3Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-2.875"
+        android:translateY="-0.375">
+        <path
+            android:pathData="M16 8.25H13.75A2.253 2.253 0 0 1 11.5 6V3.75A2.253 2.253 0 0 1 13.75 1.5H16a2.253 2.253 0 0 1 2.25 2.25V6A2.253 2.253 0 0 1 16 8.25M13.75 3a0.751 0.751 0 0 0 -0.75 0.75V6a0.751 0.751 0 0 0 0.75 0.75H16A0.751 0.751 0 0 0 16.75 6V3.75A0.751 0.751 0 0 0 16 3Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-5.375"
+        android:translateY="-0.375">
+        <path
+            android:pathData="M26 8.25H23.75A2.253 2.253 0 0 1 21.5 6V3.75A2.253 2.253 0 0 1 23.75 1.5H26a2.253 2.253 0 0 1 2.25 2.25V6A2.253 2.253 0 0 1 26 8.25M23.75 3a0.751 0.751 0 0 0 -0.75 0.75V6a0.751 0.751 0 0 0 0.75 0.75H26A0.751 0.751 0 0 0 26.75 6V3.75A0.751 0.751 0 0 0 26 3Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-0.375"
+        android:translateY="-2.875">
+        <path
+            android:pathData="M6 18.25H3.75A2.253 2.253 0 0 1 1.5 16V13.75A2.253 2.253 0 0 1 3.75 11.5H6a2.253 2.253 0 0 1 2.25 2.25V16A2.253 2.253 0 0 1 6 18.25M3.75 13a0.751 0.751 0 0 0 -0.75 0.75V16a0.751 0.751 0 0 0 0.75 0.75H6A0.751 0.751 0 0 0 6.75 16V13.75A0.751 0.751 0 0 0 6 13Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-2.875"
+        android:translateY="-2.875">
+        <path
+            android:pathData="M16 18.25H13.75A2.253 2.253 0 0 1 11.5 16V13.75a2.253 2.253 0 0 1 2.25 -2.25H16a2.253 2.253 0 0 1 2.25 2.25V16A2.253 2.253 0 0 1 16 18.25M13.75 13a0.751 0.751 0 0 0 -0.75 0.75V16a0.751 0.751 0 0 0 0.75 0.75H16a0.751 0.751 0 0 0 0.75 -0.75V13.75A0.751 0.751 0 0 0 16 13Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-5.375"
+        android:translateY="-2.875">
+        <path
+            android:pathData="M26 18.25H23.75A2.253 2.253 0 0 1 21.5 16V13.75a2.253 2.253 0 0 1 2.25 -2.25H26a2.253 2.253 0 0 1 2.25 2.25V16A2.253 2.253 0 0 1 26 18.25M23.75 13a0.751 0.751 0 0 0 -0.75 0.75V16a0.751 0.751 0 0 0 0.75 0.75H26a0.751 0.751 0 0 0 0.75 -0.75V13.75A0.751 0.751 0 0 0 26 13Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-0.375"
+        android:translateY="-5.375">
+        <path
+            android:pathData="M6 28.25H3.75A2.253 2.253 0 0 1 1.5 26V23.75A2.253 2.253 0 0 1 3.75 21.5H6a2.253 2.253 0 0 1 2.25 2.25V26A2.253 2.253 0 0 1 6 28.25M3.75 23a0.751 0.751 0 0 0 -0.75 0.75V26a0.751 0.751 0 0 0 0.75 0.75H6A0.751 0.751 0 0 0 6.75 26V23.75A0.751 0.751 0 0 0 6 23Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-2.875"
+        android:translateY="-5.375">
+        <path
+            android:pathData="M16 28.25H13.75A2.253 2.253 0 0 1 11.5 26V23.75a2.253 2.253 0 0 1 2.25 -2.25H16a2.253 2.253 0 0 1 2.25 2.25V26A2.253 2.253 0 0 1 16 28.25M13.75 23a0.751 0.751 0 0 0 -0.75 0.75V26a0.751 0.751 0 0 0 0.75 0.75H16a0.751 0.751 0 0 0 0.75 -0.75V23.75A0.751 0.751 0 0 0 16 23Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+    <group
+        android:translateX="-5.375"
+        android:translateY="-5.375">
+        <path
+            android:pathData="M26 28.25H23.75A2.253 2.253 0 0 1 21.5 26V23.75a2.253 2.253 0 0 1 2.25 -2.25H26a2.253 2.253 0 0 1 2.25 2.25V26A2.253 2.253 0 0 1 26 28.25M23.75 23a0.751 0.751 0 0 0 -0.75 0.75V26a0.751 0.751 0 0 0 0.75 0.75H26a0.751 0.751 0 0 0 0.75 -0.75V23.75A0.751 0.751 0 0 0 26 23Z"
+            android:fillColor="#FFFFFF" />
+    </group>
+</vector>
