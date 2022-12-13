@@ -19,8 +19,6 @@
     <string name="menu_content_management">Content Management</string>
     <string name="menu_label_device">DEVICE</string>
     <string name="menu_device_management">Device Management</string>
-    <string name="menu_shelf">貨架管理</string>
-    <string name="menu_quick">快速發佈</string>
 
     <!-- Common -->
     <string name="text_previous">前一步</string>
@@ -49,7 +47,17 @@
     <string name="fragment_forgot_password_back_to_login">Back to Login</string>
 
     <!-- Dashboard -->
+    <string name="fragment_dashboard_label_welcome">Welcome</string>
+    <string name="fragment_dashboard_label_desc">Check the status of system &amp; device(s)</string>
     <string name="fragment_dashboard_title">Dashboard</string>
+    <string name="fragment_dashboard_card_content_title">Content</string>
+    <string name="fragment_dashboard_card_content_subtitle">By Organization</string>
+    <string name="fragment_dashboard_card_content_storage_title">Storage Capacity</string>
+    <string name="fragment_dashboard_card_content_storage_usage">12.08/15.00 GB</string>
+    <string name="fragment_dashboard_card_content_chart_entry_image">Image</string>
+    <string name="fragment_dashboard_card_content_chart_entry_video">Video</string>
+    <string name="fragment_dashboard_card_content_chart_entry_others">Others</string>
+    <string name="fragment_dashboard_card_content_chart_entry_free">Free</string>
     <string name="fragment_dashboard_text_delivered">已派送數量</string>
     <string name="fragment_dashboard_text_waiting_delivery">等待派送數</string>
     <string name="fragment_dashboard_text_current_playing">目前撥放數</string>

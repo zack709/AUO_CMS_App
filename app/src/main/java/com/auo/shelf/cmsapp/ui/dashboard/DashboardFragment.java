@@ -1,8 +1,6 @@
 package com.auo.shelf.cmsapp.ui.dashboard;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,28 +9,19 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 
 import com.auo.shelf.cmsapp.MainActivity;
 import com.auo.shelf.cmsapp.R;
 import com.auo.shelf.cmsapp.bean.DashboardBean;
 import com.auo.shelf.cmsapp.databinding.FragmentDashboardBinding;
-import com.auo.shelf.cmsapp.json.ApiResponse;
-import com.auo.shelf.cmsapp.json.Dashboard;
-import com.auo.shelf.cmsapp.utility.Utility;
+import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import java.util.ArrayList;
-import java.util.Random;
-
-import ir.androidexception.datatable.DataTable;
-import ir.androidexception.datatable.model.DataTableHeader;
-import ir.androidexception.datatable.model.DataTableRow;
-
 
 public class DashboardFragment extends Fragment {
 
@@ -69,6 +58,11 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
+
+        // Content
+        initContentChart();
+        initContentSpinner();
+
 //        ((MainActivity) getActivity()).getSupportActionBar().setTitle(R.string.fragment_dashboard_title);
 
 
@@ -76,104 +70,136 @@ public class DashboardFragment extends Fragment {
 //            NavHostFragment.findNavController(DashboardFragment.this).navigate(R.id.action_dashboard_to_login);
 //        }else{
             // 上方五格
-            Dashboard dashboard = new Dashboard();
-            ApiResponse respPlaybackSummary = Utility.loadJson(getContext(), R.raw.dashboard_playback_summary);
-            if (respPlaybackSummary != null){
-                if (dashboard.fromPlaybackSummaryJson(respPlaybackSummary.payload, dashboardBean)){
-                    initPlaybackSummary();
-                }
-            }
-
+//            Dashboard dashboard = new Dashboard();
+//            ApiResponse respPlaybackSummary = Utility.loadJson(getContext(), R.raw.dashboard_playback_summary);
+//            if (respPlaybackSummary != null){
+//                if (dashboard.fromPlaybackSummaryJson(respPlaybackSummary.payload, dashboardBean)){
+//                    initPlaybackSummary();
+//                }
+//            }
+//
             // 左邊PieChart
-            ApiResponse respActivityStatistics = Utility.loadJson(getContext(), R.raw.dashboard_activity_statistics);
-            if (respActivityStatistics != null){
-                if (dashboard.fromActivityStatistics(respActivityStatistics.payload, dashboardBean)){
-                    initPlayerPieChart();
-                }
-            }
-
-            // 右邊PieChart
-            ApiResponse respMediaStatistics = Utility.loadJson(getContext(), R.raw.dashboard_media_statistics);
-            if (respMediaStatistics != null){
-                if (dashboard.fromMediaStatistics(respMediaStatistics.payload, dashboardBean)){
-                    initMediaPieChart();
-                }
-            }
+//            ApiResponse respActivityStatistics = Utility.loadJson(getContext(), R.raw.dashboard_activity_statistics);
+//            if (respActivityStatistics != null){
+//                if (dashboard.fromActivityStatistics(respActivityStatistics.payload, dashboardBean)){
+//                    initPlayerPieChart();
+//                }
+//            }
+//
+//            // 右邊PieChart
+//            ApiResponse respMediaStatistics = Utility.loadJson(getContext(), R.raw.dashboard_media_statistics);
+//            if (respMediaStatistics != null){
+//                if (dashboard.fromMediaStatistics(respMediaStatistics.payload, dashboardBean)){
+////                    initMediaPieChart();
+//                }
+//            }
 //        }
     }
 
     private void initPlaybackSummary(){
-        binding.fragmentDashboardInfoDelivered.setText("" + dashboardBean.playbackDelivered);
-        binding.fragmentDashboardInfoWaitingDelivery.setText("" + dashboardBean.playbackWaitingDelivery);
-        binding.fragmentDashboardInfoCurrentPlaying.setText("" + dashboardBean.playbackCurrentPlaying);
-        binding.fragmentDashboardInfoPlayedSeconds.setText("" + dashboardBean.playbackPlayedSeconds);
-        binding.fragmentDashboardInfoMediaStorage.setText("" + dashboardBean.playbackMediaStorage + " MB");
+//        binding.fragmentDashboardInfoDelivered.setText("" + dashboardBean.playbackDelivered);
+//        binding.fragmentDashboardInfoWaitingDelivery.setText("" + dashboardBean.playbackWaitingDelivery);
+//        binding.fragmentDashboardInfoCurrentPlaying.setText("" + dashboardBean.playbackCurrentPlaying);
+//        binding.fragmentDashboardInfoPlayedSeconds.setText("" + dashboardBean.playbackPlayedSeconds);
+//        binding.fragmentDashboardInfoMediaStorage.setText("" + dashboardBean.playbackMediaStorage + " MB");
     }
 
-    private void initPlayerPieChart(){
+    private void initContentChart(){
+        PieChart pieChart = binding.cardContent.fragmentDashboardCardContentChart;
+
         ArrayList<PieEntry> entry = new ArrayList<>();
-        entry.add(new PieEntry(dashboardBean.playerActiveCount, "Active"));
-        entry.add(new PieEntry(dashboardBean.playerInactiveCount, "Inactive"));
+        entry.add(new PieEntry(30, getString(R.string.fragment_dashboard_card_content_chart_entry_image)));
+        entry.add(new PieEntry(20, getString(R.string.fragment_dashboard_card_content_chart_entry_video)));
+        entry.add(new PieEntry(35, getString(R.string.fragment_dashboard_card_content_chart_entry_others)));
+        entry.add(new PieEntry(15, getString(R.string.fragment_dashboard_card_content_chart_entry_free)));
 
         PieDataSet pieDataSet = new PieDataSet(entry, "");
 
         ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.parseColor("#6ef0d0"));
-        colors.add(Color.parseColor("#ffefc5"));
+        colors.add(getActivity().getColor(R.color.amber_300));
+        colors.add(getActivity().getColor(R.color.purple_300));
+        colors.add(getActivity().getColor(R.color.blue_300));
+        colors.add(getActivity().getColor(R.color.grey_300));
 
         pieDataSet.setColors(colors);
-        pieDataSet.setValueTextSize(10);
-        pieDataSet.setValueFormatter(new ValueFormatter(){
-            @Override
-            public String getFormattedValue(float value) {
-                return String.valueOf((int) value);
-            }
-        });
+        pieDataSet.setDrawValues(false);
+//        pieDataSet.setValueTextSize(16);
+//        pieDataSet.setValueTextColor(getActivity().getColor(R.color.white));
+//        pieDataSet.setValueFormatter(new ValueFormatter(){
+//            @Override
+//            public String getFormattedValue(float value) {
+//                return String.valueOf((int) value);
+//            }
+//        });
 
         PieData pieData = new PieData(pieDataSet);
         pieData.setDataSet(pieDataSet);
-        binding.fragmentDashboardPlayerActivityStatistics.setData(pieData);
+        pieChart.setData(pieData);
 
         Description description = new Description();
         description.setText("");
-        binding.fragmentDashboardPlayerActivityStatistics.setDescription(description);
-        binding.fragmentDashboardPlayerActivityStatistics.setCenterText("Player\nActivity\nStatistics");
-        binding.fragmentDashboardPlayerActivityStatistics.setEntryLabelColor(Color.BLACK);
-        binding.fragmentDashboardPlayerActivityStatistics.invalidate();
+
+        pieChart.setDescription(description);
+        pieChart.setDrawEntryLabels(false);
+
+        pieChart.getLegend().setHorizontalAlignment(Legend.LegendHorizontalAlignment.CENTER);
+        pieChart.getLegend().setTextColor(getActivity().getColor(R.color.white));
+        pieChart.getLegend().setXEntrySpace(16);
+        pieChart.getLegend().setTextSize(14);
+
+        CustomPieChartRenderer renderer = new CustomPieChartRenderer(pieChart, pieChart.getAnimator(), pieChart.getViewPortHandler());
+        pieChart.setRenderer(renderer);
+
+        pieChart.setRotationEnabled(false);
+        pieChart.setTouchEnabled(false);
+        pieChart.setHoleRadius(70);
+        pieChart.setHoleColor(getActivity().getColor(R.color.flexy_grey_500));
+        pieChart.invalidate();
     }
 
-    private void initMediaPieChart(){
-        ArrayList<PieEntry> entry = new ArrayList<>();
-        entry.add(new PieEntry(dashboardBean.mediaImageCount, "Image"));
-        entry.add(new PieEntry(dashboardBean.mediaVideoCount, "Video"));
-
-        PieDataSet pieDataSet = new PieDataSet(entry, "");
-
-        ArrayList<Integer> colors = new ArrayList<>();
-        colors.add(Color.parseColor("#6ef0d0"));
-        colors.add(Color.parseColor("#ffefc5"));
-
-        pieDataSet.setColors(colors);
-        pieDataSet.setValueTextSize(10);
-        pieDataSet.setValueFormatter(new ValueFormatter(){
-            @Override
-            public String getFormattedValue(float value) {
-                return String.valueOf((int) value);
-            }
-        });
-
-        PieData pieData = new PieData(pieDataSet);
-        pieData.setDataSet(pieDataSet);
-        binding.fragmentDashboardMediaStatistics.setData(pieData);
-
-        Description description = new Description();
-        description.setText("");
-        binding.fragmentDashboardMediaStatistics.setDescription(description);
-        binding.fragmentDashboardMediaStatistics.setCenterText("Media\nStatistics");
-        binding.fragmentDashboardMediaStatistics.setEntryLabelColor(Color.BLACK);
-        binding.fragmentDashboardMediaStatistics.notifyDataSetChanged();
-        binding.fragmentDashboardMediaStatistics.invalidate();
+    private void initContentSpinner(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Hsinchu");
+        list.add("ATC/L3B");
+        list.add("Staff Canteen Shop");
+        list.add("Starbucks");
+        list.add("Lobby");
+        OrgAdapter adapter = new OrgAdapter(getContext(), list);
+        binding.cardContent.fragmentDashboardCardContentSpinner.setAdapter(adapter);
     }
+//
+//    private void initMediaPieChart(){
+//        ArrayList<PieEntry> entry = new ArrayList<>();
+//        entry.add(new PieEntry(dashboardBean.mediaImageCount, "Image"));
+//        entry.add(new PieEntry(dashboardBean.mediaVideoCount, "Video"));
+//
+//        PieDataSet pieDataSet = new PieDataSet(entry, "");
+//
+//        ArrayList<Integer> colors = new ArrayList<>();
+//        colors.add(Color.parseColor("#6ef0d0"));
+//        colors.add(Color.parseColor("#ffefc5"));
+//
+//        pieDataSet.setColors(colors);
+//        pieDataSet.setValueTextSize(10);
+//        pieDataSet.setValueFormatter(new ValueFormatter(){
+//            @Override
+//            public String getFormattedValue(float value) {
+//                return String.valueOf((int) value);
+//            }
+//        });
+//
+//        PieData pieData = new PieData(pieDataSet);
+//        pieData.setDataSet(pieDataSet);
+//        binding.fragmentDashboardMediaStatistics.setData(pieData);
+//
+//        Description description = new Description();
+//        description.setText("");
+//        binding.fragmentDashboardMediaStatistics.setDescription(description);
+//        binding.fragmentDashboardMediaStatistics.setCenterText("Media\nStatistics");
+//        binding.fragmentDashboardMediaStatistics.setEntryLabelColor(Color.BLACK);
+//        binding.fragmentDashboardMediaStatistics.notifyDataSetChanged();
+//        binding.fragmentDashboardMediaStatistics.invalidate();
+//    }
 
 //    private void initPieChart(){
 //        ArrayList<PieEntry> entrie1 = new ArrayList<>();
