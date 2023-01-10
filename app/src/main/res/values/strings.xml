@@ -24,8 +24,8 @@
     <string name="text_previous">前一步</string>
     <string name="text_next">下一步</string>
     <string name="text_edit">編輯</string>
-    <string name="text_ok">OK</string>
-    <string name="text_cancel">取消</string>
+    <string name="text_Okay">Okay</string>
+    <string name="text_cancel">Cancel</string>
     <string name="text_finish">完成</string>
 
     <!-- Login -->
@@ -46,18 +46,30 @@
     <string name="fragment_forgot_password_button_send_link">Send Link</string>
     <string name="fragment_forgot_password_back_to_login">Back to Login</string>
 
+    <!-- Notification -->
+    <string name="notification_title">Notifications</string>
+    <string name="notification_see_all">See all Notifications</string>
+
     <!-- Dashboard -->
     <string name="fragment_dashboard_label_welcome">Welcome</string>
     <string name="fragment_dashboard_label_desc">Check the status of system &amp; device(s)</string>
     <string name="fragment_dashboard_title">Dashboard</string>
+    <string name="fragment_dashboard_card_by_organization">By Organization</string>
+    <string name="fragment_dashboard_card_by_version">By Software Version</string>
+    <string name="fragment_dashboard_card_by_top_12">Top 12 By Organization</string>
     <string name="fragment_dashboard_card_content_title">Content</string>
-    <string name="fragment_dashboard_card_content_subtitle">By Organization</string>
     <string name="fragment_dashboard_card_content_storage_title">Storage Capacity</string>
     <string name="fragment_dashboard_card_content_storage_usage">12.08/15.00 GB</string>
     <string name="fragment_dashboard_card_content_chart_entry_image">Image</string>
     <string name="fragment_dashboard_card_content_chart_entry_video">Video</string>
     <string name="fragment_dashboard_card_content_chart_entry_others">Others</string>
     <string name="fragment_dashboard_card_content_chart_entry_free">Free</string>
+    <string name="fragment_dashboard_card_schedule_title">Schedule</string>
+    <string name="fragment_dashboard_card_schedule_chart_entry_schedule">Schedule</string>
+    <string name="fragment_dashboard_card_device_title">Device</string>
+    <string name="fragment_dashboard_card_device_chart_entry_online">Online</string>
+    <string name="fragment_dashboard_card_device_chart_entry_offline">Offline</string>
+    <string name="fragment_dashboard_card_program_title">Program</string>
     <string name="fragment_dashboard_text_delivered">已派送數量</string>
     <string name="fragment_dashboard_text_waiting_delivery">等待派送數</string>
     <string name="fragment_dashboard_text_current_playing">目前撥放數</string>
@@ -82,5 +94,22 @@
     <string name="fragment_quick_datetime_start_time">開始時間:</string>
     <string name="fragment_quick_datetime_end_time">結束時間:</string>
     <string name="title_activity_test">test</string>
+
+    <!-- Device Management -->
+    <string name="fragment_device_menu_device">Device</string>
+    <string name="fragment_device_menu_edit_label">Edit Labels</string>
+    <string name="fragment_device_menu_select">Select</string>
+    <string name="fragment_device_menu_select_all_updatable">Select All Updatable</string>
+    <string name="fragment_device_empty_list_text1">List is empty</string>
+    <string name="fragment_device_empty_list_text2">No connected devices</string>
+    <string name="fragment_device_toolbar_search_hint">Search</string>
+    <string name="fragment_device_item_edit_button">Edit</string>
+    <string name="fragment_device_label_online">Online</string>
+    <string name="fragment_device_label_offline">Offline</string>
+    <string name="fragment_device_label_updatable">Updatable</string>
+    <string name="fragment_device_edit_label_new_label_hint">New Label</string>
+    <string name="dialog_device_edit_label_device_name">Device Name</string>
+    <string name="dialog_device_edit_label_device_information">Device Information</string>
+    <string name="dialog_device_edit_label_labels">Labels</string>
 
 </resources>

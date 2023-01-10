@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/AUOPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    tools:context=".ui.device.DeviceManagementFragment">
+
+    <LinearLayout
+        android:id="@+id/fragment_device_management_menu_device"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/flexy_grey_900"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        
+        <LinearLayout
+            android:id="@+id/fragment_device_management_menu_icon_device"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bottom_menu_selected"
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/icon_computer"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_device_management_menu_text_device"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_device_menu_device"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fragment_device_management_menu_edit_label"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/flexy_grey_900"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/fragment_device_management_menu_icon_edit_label"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/icon_label"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_device_management_menu_text_edit_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fragment_device_menu_edit_label"
+            android:textColor="@color/white"
+            android:textSize="14dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

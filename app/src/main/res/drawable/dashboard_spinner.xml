@@ -14,7 +14,7 @@
         android:height="16dp"
         android:right="5dp"
         android:gravity="right|center_vertical">
-        <bitmap android:src="@mipmap/icon_spinner_arrow" />
+        <bitmap android:src="@mipmap/icon_spinner_arrow_down" />
     </item>
 
 </layer-list>

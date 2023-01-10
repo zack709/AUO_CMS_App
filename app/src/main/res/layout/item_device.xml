@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="@color/flexy_grey_700"
+    app:cardCornerRadius="20dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        >
+
+        <ImageView
+            android:id="@+id/item_device_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:src="@mipmap/icon_computer"
+            app:layout_constraintTop_toTopOf="@id/item_device_name"
+            app:layout_constraintBottom_toBottomOf="@id/item_device_resolution"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/item_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_device_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/item_device_resolution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/item_device_name"
+            app:layout_constraintLeft_toRightOf="@id/item_device_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_device_item_label_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/item_device_resolution"
+            app:layout_constraintBottom_toTopOf="@id/item_device_edit_button"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/item_device_edit_button"
+            android:layout_width="86dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/fragment_device_item_edit_button"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/blue_grey_400"
+            app:icon="@drawable/icon_edit"
+            app:iconGravity="start"
+            app:layout_constraintTop_toBottomOf="@id/fragment_device_item_label_list"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/item_device_delete_button"
+            android:layout_width="48dp"
+            android:layout_height="42dp"
+            app:backgroundTint="@color/red_500"
+            app:icon="@drawable/icon_delete"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

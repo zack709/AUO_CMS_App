@@ -17,10 +17,12 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 public class CustomPieChartRenderer extends PieChartRenderer {
 
     private Context context;
+    private int iconResource;
 
-    public CustomPieChartRenderer(PieChart chart, ChartAnimator animator, ViewPortHandler viewPortHandler) {
+    public CustomPieChartRenderer(PieChart chart, ChartAnimator animator, ViewPortHandler viewPortHandler, int iconRes) {
         super(chart, animator, viewPortHandler);
         context = chart.getContext();
+        iconResource = iconRes;
     }
 
     @Override
@@ -28,7 +30,7 @@ public class CustomPieChartRenderer extends PieChartRenderer {
         super.drawExtras(c);
 
         MPPointF center = mChart.getCenterCircleBox();
-        Drawable d = Utility.getResizeDrawable(context, R.mipmap.icon_storage, 32, 32);
+        Drawable d = Utility.getResizeDrawable(context, iconResource, 32, 32);
 
         if(d != null) {
             float halfWidth = d.getIntrinsicWidth() / 2;

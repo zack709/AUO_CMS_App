@@ -1,4 +1,4 @@
-package com.auo.shelf.cmsapp.ui.dashboard;
+package com.auo.shelf.cmsapp.ui.dashboard.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -21,10 +21,10 @@ public class OrgAdapter extends ArrayAdapter<String> {
     private Context mContext;
     private LayoutInflater inflater;
     private ArrayList<String> mList = new ArrayList<>();
-    private int selectedIndex = -1;
+    private int selectedIndex = 0;
 
     public OrgAdapter(@NonNull Context context, ArrayList<String> list) {
-        super(context, R.layout.spinner_dropdown, list);
+        super(context, 0, list);
         mContext = context;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         mList = list;
@@ -43,7 +43,14 @@ public class OrgAdapter extends ArrayAdapter<String> {
 
     @Override
     public View getDropDownView(int position, @Nullable View view, @NonNull ViewGroup parent) {
-        return inflateView(position, view);
+        view = inflateView(position, view);
+        ViewHolder holder = (ViewHolder) view.getTag();
+        if (position == selectedIndex){
+            holder.itemLayout.setBackgroundResource(R.drawable.dashboard_spinner_selected_layout);
+        }else{
+            holder.itemLayout.setBackgroundColor(Color.TRANSPARENT);
+        }
+        return view;
     }
 
     private View inflateView(int position, @Nullable View view){
@@ -59,11 +66,6 @@ public class OrgAdapter extends ArrayAdapter<String> {
                 holder = (ViewHolder) view.getTag();
             }
 
-            if (position == selectedIndex){
-                holder.itemLayout.setBackgroundColor(getContext().getColor(R.color.gray_500));
-            }else{
-                holder.itemLayout.setBackgroundColor(Color.TRANSPARENT);
-            }
             holder.orgName.setText(name);
         }
         return view;

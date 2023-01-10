@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/AUOPrimary">
@@ -39,20 +40,21 @@
                 android:id="@+id/fragment_dashboard_card_content_subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/fragment_dashboard_card_content_subtitle"
+                android:text="@string/fragment_dashboard_card_by_organization"
                 android:textColor="@color/white_a40"
                 android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_card_content_title"
                 app:layout_constraintLeft_toLeftOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/fragment_dashboard_card_content_title"
+                tools:ignore="TextContrastCheck" />
 
-            <androidx.appcompat.widget.AppCompatSpinner
+            <com.auo.shelf.cmsapp.ui.dashboard.spinner.DashboardSpinner
                 android:id="@+id/fragment_dashboard_card_content_spinner"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:paddingRight="24dp"
+                android:layout_height="40dp"
+                android:paddingStart="2dp"
+                android:paddingEnd="24dp"
                 android:background="@drawable/dashboard_spinner"
-                android:popupBackground="@color/gray_800"
+                android:popupBackground="@drawable/dashboard_spinner_dropdown"
                 app:layout_constraintTop_toTopOf="@id/fragment_dashboard_card_content_title"
                 app:layout_constraintBottom_toBottomOf="@id/fragment_dashboard_card_content_subtitle"
                 app:layout_constraintRight_toRightOf="parent"

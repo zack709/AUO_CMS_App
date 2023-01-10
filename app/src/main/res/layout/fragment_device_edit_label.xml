@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/AUOPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.device.DeviceLabelEditFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_device_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/flexy_grey_800"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <com.auo.shelf.cmsapp.ui.common.AUOEditText
+            android:id="@+id/fragment_device_edit_label_new_label"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:paddingHorizontal="12dp"
+            android:background="@drawable/edit_text_normal"
+            android:hint="@string/fragment_device_edit_label_new_label_hint"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray_400"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <LinearLayout
+            android:id="@+id/fragment_device_edit_label_new_label_done_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="24dp"
+            android:padding="4dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.auo.shelf.cmsapp.ui.common.AUOFocusImageView
+                android:id="@+id/fragment_device_edit_label_new_label_done_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:src="@drawable/icon_done_gray"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_400"
+            android:layout_marginHorizontal="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fragment_device_edit_label_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="80dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/fragment_device_bottom_menu"
+        app:layout_constraintTop_toBottomOf="@id/fragment_device_search_bar"
+        />
+
+    <include
+        android:id="@+id/fragment_device_bottom_menu"
+        layout="@layout/fragment_device_bottom_menu"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

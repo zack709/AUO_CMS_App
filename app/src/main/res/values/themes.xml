@@ -27,4 +27,5 @@
     <style name="MySnackBarStyle" parent="Widget.MaterialComponents.Snackbar">
         <item name="android:background">@color/AUOPrimary</item>
     </style>
+
 </resources>
